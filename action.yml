@@ -1,0 +1,15 @@
+---
+name: go-zetasqlfmt
+description: run go-zetasqlfmt
+inputs:
+  path:
+    description: file paths
+    required: true
+  nosemicolon:
+    description: no semicolon option
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.path }}
