@@ -12,6 +12,4 @@ ENV CXX clang++
 
 WORKDIR /go-zetasqlfmt
 
-RUN git clone https://github.com/nametake/go-zetasqlfmt.git . \
-    && go mod download \
-    && go install ./cmd/zetasqlfmt
+RUN go install github.com/nametake/go-zetasqlfmt/cmd/zetasqlfmt@latest
