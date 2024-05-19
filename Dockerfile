@@ -13,3 +13,7 @@ ENV CXX clang++
 WORKDIR /go-zetasqlfmt
 
 RUN go install github.com/nametake/go-zetasqlfmt/cmd/zetasqlfmt@latest
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
