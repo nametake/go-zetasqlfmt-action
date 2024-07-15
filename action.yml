@@ -10,6 +10,6 @@ inputs:
     required: false
 runs:
   using: docker
-  image: docker://nametake/go-zetasqlfmt-action:v1
+  image: Dockerfile
   args:
   - ${{ inputs.path }}
