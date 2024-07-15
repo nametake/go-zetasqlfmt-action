@@ -4,7 +4,7 @@ path=$1
 nosemicolon=$2
 
 if [ "$nosemicolon" = "true" ]; then
-	zetasqlfmt --nosemicolon "$path"
+	zetasqlfmt -nosemicolon "$path"
 	exit 0
 fi
 
