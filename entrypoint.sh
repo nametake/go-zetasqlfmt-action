@@ -6,6 +6,8 @@ nosemicolon=$3
 
 cd "$workingDir" || exit
 
+pwd
+
 if [ "$nosemicolon" = "true" ]; then
 	zetasqlfmt -nosemicolon "$path"
 	exit 0
