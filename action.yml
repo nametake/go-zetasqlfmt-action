@@ -2,6 +2,10 @@
 name: go-zetasqlfmt
 description: run go-zetasqlfmt
 inputs:
+  working-directory:
+    description: file paths
+    required: false
+    default: .
   path:
     description: file paths
     required: true
@@ -12,5 +16,6 @@ runs:
   using: docker
   image: Dockerfile
   args:
-  - ${{ inputs.path }}
-  - ${{ inputs.nosemicolon }}
+    - ${{ inputs.working-directory }}
+    - ${{ inputs.path }}
+    - ${{ inputs.nosemicolon }}
